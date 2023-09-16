@@ -10,12 +10,12 @@ import java.util.*;
 
 public class leetCode989 {
     public static void main(String[] args) {
-        int[] num = {1,2,0,0};
-        int k = 34;
+        int[] num = {2,1,5};
+        int k = 806;
         System.out.println(addToArrayForm(num,k));
 
     }
-
+//To sum each element in the array
     public static int sum(int[] num , int k){
         int sum = 0;
         int j = 0;
@@ -26,21 +26,29 @@ public class leetCode989 {
 
 
         }
-        return sum+k;
+        int total_sum = sum + k;
+        return total_sum;
     }
     public static List<Integer> addToArrayForm(int[] num, int k) {
         int summation = sum(num,k);
+        String str = Integer.toString(summation);
+        int size = str.length();
+        List<Integer> newOutputList = new ArrayList<Integer>();
 
-        List<Integer> output = new ArrayList<>(num.length);
-        for (int index = num.length-1; index >=0 ; index--) {
+
+        int[] output = new int[size];
+        List<Integer> outputlist = new ArrayList<Integer>();
+        for (int index = size-1; index >=0 ; index--) {
             int remainder = summation %10;
-            output.add(index,remainder);
+            outputlist.add(remainder);
             summation = summation / 10;
 
-
-
         }
-        return output;
+
+        //for reversing the arraylist
+        Collections.reverse(outputlist);
+
+        return outputlist;
 
 
 
