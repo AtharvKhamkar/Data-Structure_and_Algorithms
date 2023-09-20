@@ -1,8 +1,8 @@
 public class binarySearch {
     public static void main(String[] args) {
         //int arr = { 0,   1,   2, 3, 4, 5, 6, 7,  8,  9,  10, 11, 12}
-        int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
-        int target = 89;
+        int[] arr = {4,5,6,7};
+        int target = 0;
         int ans = binarySearch(arr, target);
         System.out.println(ans);
 
