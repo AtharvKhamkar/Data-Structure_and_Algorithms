@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/BinarySearch/BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CyclicSort/CyclicSort.iml" filepath="$PROJECT_DIR$/CyclicSort/CyclicSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/DSA.iml" filepath="$PROJECT_DIR$/DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinearSearch/LinearSearch.iml" filepath="$PROJECT_DIR$/LinearSearch/LinearSearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/bubbleSort/bubbleSort.iml" filepath="$PROJECT_DIR$/bubbleSort/bubbleSort.iml" />
