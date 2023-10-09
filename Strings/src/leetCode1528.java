@@ -5,8 +5,8 @@
 import java.util.*;
 public class leetCode1528 {
     public static void main(String[] args) {
-        String s = "a";
-        int[] indices = {0};
+        String s = "codeleet";
+        int[] indices = {4,5,6,7,0,2,1,3};
         System.out.println(restoreString(s, indices));
 
     }
