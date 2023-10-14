@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/LinearSearch/LinearSearch.iml" filepath="$PROJECT_DIR$/LinearSearch/LinearSearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basicMaths/basicMaths.iml" filepath="$PROJECT_DIR$/basicMaths/basicMaths.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitManipulation/bitManipulation.iml" filepath="$PROJECT_DIR$/bitManipulation/bitManipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/bubbleSort/bubbleSort.iml" filepath="$PROJECT_DIR$/bubbleSort/bubbleSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/selectionSort/selectionSort.iml" filepath="$PROJECT_DIR$/selectionSort/selectionSort.iml" />
