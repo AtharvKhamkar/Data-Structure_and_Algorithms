@@ -15,47 +15,29 @@ public class leetCode1431 {
 
     }
 
-    public static int findMax(int[] arr){
-        int max = Integer.MIN_VALUE;
-        for (int index = 0; index < arr.length; index++) {
-            if(arr[index] > max){
-                max = arr[index];
+    public static int findMax(int[] candies){
+        int MAX = candies[0];
+        for(int i=0;i<candies.length;i++){
+            if(candies[i]>MAX){
+                MAX = candies[i];
             }
         }
-        return max;
-
+        return MAX;
     }
-    public static boolean checkMaxOrNot(int[] candies, int extraCandies){
-        int max_limit = findMax(candies);
-        for (int index = 0; index < candies.length; index++) {
-            if(candies[index] + extraCandies >= max_limit){
-                return true;
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        int maximum = findMax(candies);
+
+        ArrayList<Boolean> result = new ArrayList<>();
+
+        for(int i=0;i<candies.length;i++){
+            if(candies[i]+extraCandies >= maximum){
+                result.add(true);    //thing to remember arraylist uses .add method to add elements and stringBuilder uses .append method to add characters
+            }else{
+                result.add(false);
             }
-            return false;
-
         }
-        return false;
-    }
 
-    public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        List<Boolean> output = new ArrayList<>();
-        int max_limit = findMax(candies);
-        for (int index = 0; index < candies.length; index++) {
-            boolean ans;
-            if (candies[index] + extraCandies >= max_limit) {
-                ans = true;
-                output.add(ans);
-            } else {
-                ans = false;
-                output.add(ans);
-            }
-
-
-        }
-        return output;
-
-
-
+        return result;
     }
 
 
