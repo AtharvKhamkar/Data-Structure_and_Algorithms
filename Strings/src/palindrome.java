@@ -1,19 +1,19 @@
 public class palindrome {
     public static void main(String[] args) {
-        String str = "";
+        String str = "palindrome";
         System.out.println(isPalindrome(str));
 
     }
-    public static boolean isPalindrome(String s){
-        int i = 0;
-        int j = s.length()-1;
+    public static boolean isPalindrome(String str){
+        int start = 0;
+        int end = str.length()-1;
 
-        while(i<j){
-            if(s.charAt(i) != s.charAt(j)){
+        while(start < end){
+            if(str.charAt(start) != str.charAt(end)){
                 return false;
             }
-            i++;
-            j--;
+            start++;
+            end--;
         }
         return true;
     }
