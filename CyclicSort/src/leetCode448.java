@@ -5,7 +5,7 @@ public class leetCode448 {
     public static void main(String[] args) {
         int[] nums = {4,3,2,7,8,2,3,1};
         cyclicSort(nums);
-        System.out.println(findDisappearedNumbers(nums));
+        System.out.println(Arrays.toString(nums));
 
     }
 

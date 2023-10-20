@@ -10,7 +10,7 @@ import java.util.*;
 public class leetCode2089 {
     public static void main(String[] args) {
         int[] nums = {1, 2, 5, 2, 3};
-        int target = 5;
+        int target = 2;
         System.out.println(targetIndices(nums,target));
     }
 
