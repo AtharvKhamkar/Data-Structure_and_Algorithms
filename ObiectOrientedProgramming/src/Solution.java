@@ -2,6 +2,12 @@ public class Solution {
     public static void main(String[] args){
         Student student1 = new Student(10,"Atharv",95);
         Student other = new Student(student1);
+
+
+        A obj;
+        for (int i = 0; i < 100000000; i++) {
+            obj = new A("Random Name");
+        }
         System.out.println(student1.rno);
         System.out.println(student1.name);
         System.out.println(student1.marks);
@@ -31,5 +37,21 @@ class Student{
         this.rno = student1.rno;
         this.name = student1.name;
         this.marks = student1.marks;
+    }
+
+
+}
+
+class A{
+    String name;
+
+    A(String name){
+        this.name = name;
+
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Object is destroyed");
     }
 }
