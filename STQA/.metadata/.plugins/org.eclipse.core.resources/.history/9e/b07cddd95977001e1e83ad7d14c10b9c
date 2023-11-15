@@ -1,0 +1,61 @@
+package stqa;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class FunctionalityTesting {
+    private Account account;
+
+    private Customer customer;
+
+    @BeforeEach
+    void setUp() {
+        customer = new Customer("John Doe", 12345, 1000.0);
+    }
+    
+    
+    @Test
+    void testCreateNewAccount() {
+        Customer newCustomer = new Customer("Alice Smith", 54321, 2000.0);
+        assertAll(
+            () -> assertTrue("Alice Smith".equals(newCustomer.getName())),
+            () -> assertTrue(54321 == newCustomer.getAccoutNumber()),
+            () -> assertTrue(2000.0 == newCustomer.getBalance())
+        );
+    }
+
+
+
+    @Test
+    void testValidDeposit() {
+        customer.deposit(500.0);
+        assertTrue(customer.getBalance() == 1500.0);
+    }
+
+    
+
+    @Test
+    void testValidWithdrawal() {
+        customer.withdraw(500.0);
+        assertTrue(customer.getBalance() == 500.0);
+    }
+
+    
+    @Test
+    void ValidNameCustomer() {
+        Customer emptyNameCustomer = new Customer("Kalpesh", 99999, 500.0);
+        assertTrue(emptyNameCustomer.getName().isEmpty());
+    }
+    
+//    @Test
+//    void ValidDisplayBalance() {
+//        Customer
+//        assertTrue(emptyNameCustomer.getName().isEmpty());
+//    }
+    
+
+    
+}

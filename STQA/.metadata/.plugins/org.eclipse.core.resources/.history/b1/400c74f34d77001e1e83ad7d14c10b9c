@@ -1,0 +1,44 @@
+package org.example;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class BankingApplicationTest {
+    private Customer customer;
+
+    @BeforeEach
+    public void setUp() {
+        customer = new Customer("Test User", 12345, 1000.0);
+    }
+
+    @AfterEach
+    public void tearDown() {
+        // Reset the customer's balance to its initial state
+        int accountNumber = 12345;
+		customer = new Customer("Test User", accountNumber, 1000.0);
+    }
+
+    @Test
+    public void testDeposit() {
+        customer.deposit(500.0);
+        assertEquals(1500.0, customer.displayBalance(), 0.001);
+    }
+
+    @Test
+    public void testWithdraw() {
+        customer.withdraw(500.0);
+        assertEquals(500.0, customer.displayBalance(), 0.001);
+    }
+    // Other test cases...
+
+    @Test
+    public void testNegativeInitialBalance() {
+        Customer invalidCustomer = new Customer("Invalid User", 98765, -100.0);
+        assertEquals(0.0, invalidCustomer.displayBalance(), 0.001);
+    }
+
+
+}

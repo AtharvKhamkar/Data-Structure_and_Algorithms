@@ -1,6 +1,6 @@
 public class fibo {
     public static void main(String[] args) {
-        int ans = fibo(4);
+        int ans = fibo(10);
         System.out.println(ans);
 
     }

@@ -1,0 +1,117 @@
+package stqa;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class FunctionalityTesting {
+    private Account account;
+
+    @BeforeEach
+    void setUp() {
+        // Initialize an account with an initial balance
+        account = new Account(12345, 1000.0);
+    }
+
+    @Test
+    void testDeposit() {
+        // Test depositing a valid amount
+        account.deposit(500.0);
+
+        // Check if the balance has been updated correctly
+        assertAll(
+            () -> assertTrue(account.getBalance() == 1500.0),
+            () -> assertTrue(account.getBalance() > 1000.0),
+            () -> assertTrue(account.getBalance() < 2000.0)
+        );
+    }
+
+    @Test
+    void testWithdraw() {
+        // Test withdrawing a valid amount
+        account.withdraw(500.0);
+
+        // Check if the balance has been updated correctly
+        assertAll(
+            () -> assertTrue(account.getBalance() == 500.0),
+            () -> assertTrue(account.getBalance() > 0.0),
+            () -> assertTrue(account.getBalance() < 1000.0)
+        );
+    }
+
+    @Test
+    void testWithdrawInsufficientFunds() {
+        // Attempt to withdraw more than the balance
+        account.withdraw(2000.0);
+
+        // Check if the balance remains the same (insufficient funds)
+        assertAll(
+            () -> assertTrue(account.getBalance() == 1000.0),
+            () -> assertTrue(account.getBalance() > 0.0),
+            () -> assertTrue(account.getBalance() < 2000.0)
+        );
+    }
+
+    @Test
+    void testNegativeWithdraw() {
+        // Attempt to withdraw a negative amount
+        account.withdraw(-200.0);
+
+        // Check if the balance remains the same
+        assertAll(
+            () -> assertTrue(account.getBalance() == 1000.0),
+            () -> assertTrue(account.getBalance() > 0.0),
+            () -> assertTrue(account.getBalance() < 2000.0)
+        );
+    }
+
+    @Test
+    void testInvalidWithdrawalAmount() {
+        // Attempt to withdraw more than the balance
+        account.withdraw(2000.0);
+
+        // Check if the balance remains the same (insufficient funds)
+        assertAll(
+            () -> assertTrue(account.getBalance() == 1000.0),
+            () -> assertTrue(account.getBalance() > 0.0),
+            () -> assertTrue(account.getBalance() < 2000.0)
+        );
+    }
+
+    @Test
+    void testNegativeDeposit() {
+        // Attempt to deposit a negative amount
+        account.deposit(-200.0);
+
+        // Check if the balance remains the same
+        assertAll(
+            () -> assertTrue(account.getBalance() == 1000.0),
+            () -> assertTrue(account.getBalance() > 0.0),
+            () -> assertTrue(account.getBalance() < 2000.0)
+        );
+    }
+
+    @Test
+    void testInvalidUserName() {
+        // Create a customer with an empty name
+        Customer invalidCustomer = new Customer("", 54321, 2000.0);
+
+        // Check if the customer's name is empty
+        assertTrue(invalidCustomer.getName().isEmpty());
+    }
+
+    @Test
+    void testNegativeInitialBalance() {
+        // Create a customer with a negative initial balance
+        Customer invalidCustomer = new Customer("Invalid User", 98765, -100.0);
+
+        // Check if the initial balance is set to 0.0
+        assertAll(
+            () -> assertTrue(invalidCustomer.getBalance() == 0.0),
+            () -> assertTrue(invalidCustomer.getBalance() >= 0.0),
+            () -> assertTrue(invalidCustomer.getBalance() < 0.1)
+        );
+    }
+}

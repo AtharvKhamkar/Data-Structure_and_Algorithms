@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UnitTesting.testNegativeWithdrawal" project="stqa" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="stqa.UnitTesting" time="0.013" displayname="UnitTesting" uniqueid="[engine:junit-jupiter]/[class:stqa.UnitTesting]">
+    <testcase name="testNegativeWithdrawal" classname="stqa.UnitTesting" time="0.013" displayname="testNegativeWithdrawal()" uniqueid="[engine:junit-jupiter]/[class:stqa.UnitTesting]/[method:testNegativeWithdrawal()]"/>
+  </testsuite>
+</testrun>

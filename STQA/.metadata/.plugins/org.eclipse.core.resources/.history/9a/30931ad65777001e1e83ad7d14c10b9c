@@ -1,0 +1,59 @@
+package stqa;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class FunctionalityTesting {
+    private Account account;
+
+    @Test
+    void testValidDeposit() {
+        Customer customer = new Customer("John Doe", 12345, 1000.0);
+        customer.deposit(500.0);
+        assertEquals(1500.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testNegativeDeposit() {
+        Customer customer = new Customer("Alice Smith", 54321, 2000.0);
+        customer.deposit(-100.0);
+        assertEquals(2000.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testZeroDeposit() {
+        Customer customer = new Customer("Bob Johnson", 98765, 3000.0);
+        customer.deposit(0.0);
+        assertEquals(3000.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testValidWithdrawal() {
+        Customer customer = new Customer("Jane Brown", 13579, 1500.0);
+        customer.withdraw(500.0);
+        assertEquals(1000.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testNegativeWithdrawal() {
+        Customer customer = new Customer("Sam Wilson", 24680, 2000.0);
+        customer.withdraw(-100.0);
+        assertEquals(2000.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testInsufficientBalanceWithdrawal() {
+        Customer customer = new Customer("Eva Davis", 11223, 800.0);
+        customer.withdraw(1000.0);
+        assertEquals(800.0, customer.getBalance(), 0.001);
+    }
+
+    @Test
+    void testEmptyNameCustomer() {
+        Customer customer = new Customer("", 99999, 500.0);
+        assertEquals("", customer.getName());
+    }
+}
