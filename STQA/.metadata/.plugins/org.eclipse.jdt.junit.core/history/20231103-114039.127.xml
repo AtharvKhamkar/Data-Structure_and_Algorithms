@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="IntegrationTesting.testWithdrawAndDisplayBalanceIntegration" project="stqa" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="stqa.IntegrationTesting" time="0.016" displayname="IntegrationTesting" uniqueid="[engine:junit-jupiter]/[class:stqa.IntegrationTesting]">
-    <testcase name="testWithdrawAndDisplayBalanceIntegration" classname="stqa.IntegrationTesting" time="0.016" displayname="testWithdrawAndDisplayBalanceIntegration()" uniqueid="[engine:junit-jupiter]/[class:stqa.IntegrationTesting]/[method:testWithdrawAndDisplayBalanceIntegration()]"/>
-  </testsuite>
-</testrun>

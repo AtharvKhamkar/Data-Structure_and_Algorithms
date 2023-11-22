@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UnitTesting.testCreateAccountWithEmptyName" project="stqa" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="stqa.UnitTesting" time="0.028" displayname="UnitTesting" uniqueid="[engine:junit-jupiter]/[class:stqa.UnitTesting]">
-    <testcase name="testCreateAccountWithEmptyName" classname="stqa.UnitTesting" time="0.028" displayname="testCreateAccountWithEmptyName()" uniqueid="[engine:junit-jupiter]/[class:stqa.UnitTesting]/[method:testCreateAccountWithEmptyName()]"/>
-  </testsuite>
-</testrun>
