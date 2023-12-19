@@ -12,8 +12,8 @@ import java.math.*;
 
 public class leetCode875 {
     public static void main(String[] args) {
-        int[] piles = {30,11,23,4,20};
-        System.out.println(minEatingSpeed(piles,6));
+        int[] piles = {3,6,7,11};
+        System.out.println(minEatingSpeed(piles,8));
 
 
     }

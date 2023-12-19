@@ -8,8 +8,8 @@
 import java.math.*;
 public class leetCode1011 {
     public static void main(String[] args) {
-        int[] weights = {1,2,3,1,1};
-        System.out.println(shipWithinDays(weights,4));
+        int[] weights = {1,2,3,4,5,6,7,8,9,10};
+        System.out.println(shipWithinDays(weights,5));
 
     }
 
@@ -49,14 +49,12 @@ public class leetCode1011 {
         int load = 0;
         int days = 1;
         for (int i = 0; i < weights.length; i++) {
-            if(weights[i]+load > capacity){
+            load = load + weights[i];
+            if(load > capacity){
                 days = days+1;
                 load=weights[i];
 
-            }else{
-                load = load + weights[i];
             }
-
         }
         return days;
     }
