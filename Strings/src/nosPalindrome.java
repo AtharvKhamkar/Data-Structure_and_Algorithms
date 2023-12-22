@@ -22,14 +22,15 @@ public class nosPalindrome {
         return counter;
     }
 
-    public static boolean countPalindrome(String substring){
-        StringBuilder gtr = new StringBuilder(substring);
-        gtr.reverse();
-        String s = gtr + "";
-        if(substring.equals(s)){
-            return true;
-        }else{
-            return false;
+    public static boolean countPalindrome(String str){
+        for(int i=0;i<str.length()/2;i++){
+            char S = str.charAt(i);
+            char E = str.charAt(str.length()-1-i);
+
+            if(S != E){
+                return false;
+            }
         }
+        return true;
     }
 }
