@@ -3,13 +3,12 @@ public class userInput {
     public static void main(String[] args){
         //Input
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name:");
         String name = sc.next();
-        String fullname = sc.nextLine();
         System.out.println(name);
+        System.out.println("Enter your full name");
+        String fullName = sc.nextLine();
+        System.out.println(fullName);
 
-        //nextInt() => To take input in integer form
-        //nextFloat() => To take input in floating form
-
-        System.out.println(fullname);
     }
 }
