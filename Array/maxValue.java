@@ -19,9 +19,7 @@ public class maxValue {
     }
     static int maxRange(int[] arr,int start,int end){
         //adding edge cases
-        if(end > start){
-            return -1;
-        }
+
         if(arr == null){
             return -1;
         }

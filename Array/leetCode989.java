@@ -10,45 +10,37 @@ import java.util.*;
 
 public class leetCode989 {
     public static void main(String[] args) {
-        int[] num = {2,1,5};
-        int k = 806;
+        int[] num = {9,9,9,9,9,9,9,9,9,9};
+        int k = 1;
         System.out.println(addToArrayForm(num,k));
 
     }
 //To sum each element in the array
-    public static int sum(int[] num , int k){
-        int sum = 0;
-        int j = 0;
-        for (int index = num.length-1; index >= 0; index--) {
-            sum =sum + (int) (num[index] * Math.pow(10,j));
-            j++;
-
-
-
-        }
-        int total_sum = sum + k;
-        return total_sum;
+public static int summation(int[] num,int k){
+    int total = 0;
+    int j = 0;
+    for(int i=num.length-1;i>=0;i--){
+        total = total + (int)(num[i] * Math.pow(10,j));
+        j++;
     }
+
+    total = total + k;
+
+    return total;
+}
     public static List<Integer> addToArrayForm(int[] num, int k) {
-        int summation = sum(num,k);
-        String str = Integer.toString(summation);
-        int size = str.length();
-        List<Integer> newOutputList = new ArrayList<Integer>();
+        int total = summation(num,k);
 
-
-        int[] output = new int[size];
-        List<Integer> outputlist = new ArrayList<Integer>();
-        for (int index = size-1; index >=0 ; index--) {
-            int remainder = summation %10;
-            outputlist.add(remainder);
-            summation = summation / 10;
-
+        List<Integer> outputList = new ArrayList<Integer>();
+        int rem = 0;
+        while(total != 0){
+            rem = total % 10;
+            outputList.add(rem);
+            total = total / 10;
         }
 
-        //for reversing the arraylist
-        Collections.reverse(outputlist);
-
-        return outputlist;
+        Collections.reverse(outputList);
+        return outputList;
 
 
 

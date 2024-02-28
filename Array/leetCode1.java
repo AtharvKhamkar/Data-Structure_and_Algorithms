@@ -8,8 +8,8 @@ import java.util.Arrays;
 //You can return the answer in any order.
 public class leetCode1 {
     public static void main(String[] args) {
-        int[] nums = {2,7,11,15};
-        System.out.println(Arrays.toString(twoSum(nums, 9)));
+        int[] nums = {3,3};
+        System.out.println(Arrays.toString(twoSum(nums, 6)));
 
     }
 
